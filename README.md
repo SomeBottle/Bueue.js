@@ -9,7 +9,8 @@
 <script src='./bueue.min.js' charset='UTF-8'></script>  
 ```
 * 对队列进行操作：  
-  1.顺序添加函数：
+
+  1.顺序添加函数：  
   ```javascript
   $bueue.c(function);  
   ```
@@ -33,4 +34,38 @@
   });
   console.log(a+' '+b+' '+c+' '+d);
   ```
-  输出：0,1,2,3.没错,bueue项目的id是从0开始计的.
+  输出：0,1,2,3.没错,bueue项目的id是从0开始计的.  
+  
+  2.啊不想要这个函数待着了，从队列里移除吧！  
+  ```javascript
+  $bueue.d(id);  
+  ```
+  id即为顺序添加时返回的值.  
+  
+  3.队列里空出来一个位置，插入一个函数吧！  
+  ```javascript
+  $bueue.e(id,function);  
+  ```
+  这将会在队列中指定id的**空位**插入一个函数，这里有个小技巧，你需要先删除原有位置上的函数。  
+  
+  4.让队列开始执行.  
+  ```javascript
+  $bueue.start();  
+  ```
+  
+  5.来一发<del>仙人跳</del>跳跃执行~  
+  ```javascript
+  $bueue.jump(id);  
+  ```
+  执行这一步后接下来执行的便是编号为id的函数.  
+  
+  6.执行下一个.  
+  ```javascript
+  $bueue.next();  
+  ```
+  这个方法通常在上一个函数的末尾加入，以在上一个函数运行结束时能开始执行下一个.  
+  
+  7.重置队列.  
+  ```javascript
+  $bueue.re();  
+  ```
