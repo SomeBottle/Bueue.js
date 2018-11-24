@@ -60,7 +60,7 @@
             this.ids = 0;
         }
         this.onque = 0;
-        o.state = 1;
+        this.state = 1;
         if (this.debug) {
             console.log('[Bueue]Reseted.');
         }
