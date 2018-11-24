@@ -82,6 +82,17 @@
   输出默认关闭，当开启输出时，控制台会显示队列的情况：  
   ![](https://ww2.sinaimg.cn/large/ed039e1fgy1fxjmpupt9nj20bp0k4jry)  
   
+  9.队列状态.  
+  ```javascript
+  $bueue.state;
+  ```
+  State:
+   * 1 -> 未执行.  
+   * 2 -> 执行中.  
+   * 3 -> 执行完毕.  
+   
+  *PS:re()重置后state值会变成1.*
+  
 ### Example  
 ```javascript
 var a=$bueue.c(function(){
