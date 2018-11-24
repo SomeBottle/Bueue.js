@@ -80,4 +80,37 @@
   $bueue.de(true/false);  
   ```
   输出默认关闭，当开启输出时，控制台会显示队列的情况：  
+  ![](https://ww2.sinaimg.cn/large/ed039e1fgy1fxjmpupt9nj20bp0k4jry)  
   
+### Example  
+```javascript
+var a=$bueue.c(function(){
+	console.log('This is the 1st queue');
+	setTimeout(function(){$bueue.next();},2000);
+});
+var b=$bueue.c(function(){
+	console.log('This is the 2nd queue');
+	setTimeout(function(){$bueue.next();},2000);
+});
+var c=$bueue.c(function(){
+	console.log('This is the 3rd queue');
+	setTimeout(function(){$bueue.next();},2000);
+});
+var d=$bueue.c(function(){
+	console.log('This is the 4th queue');
+	setTimeout(function(){$bueue.next();},2000);
+});
+$bueue.c(function(){
+	console.log('This is the END.');
+});
+
+$bueue.start();
+```
+输出结果： 
+```
+This is the 1st queue
+This is the 2nd queue
+This is the 3rd queue
+This is the 4th queue
+This is the END.
+```
