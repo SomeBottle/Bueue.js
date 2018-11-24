@@ -71,6 +71,7 @@
         while (o.onque <= o.ids && typeof o.qs[o.onque] == 'undefined') {
             o.onque = o.onque + 1;
         }
+		setTimeout(function(){/*防止死递归*/
         if (o.onque <= o.ids) {
             o.qs[o.onque]();
             o.state = 2;
@@ -86,6 +87,7 @@
                 console.log('[Bueue]Already finished.');
             }
         }
+		},10);
     },
     de: function(b) {
         /*调试输出*/
