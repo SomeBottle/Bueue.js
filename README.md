@@ -69,3 +69,15 @@
   ```javascript
   $bueue.re();  
   ```
+  当不带bool值时，这个方法默认是复原id计数，从第一个函数开始执行.  
+  ```javascript
+  $bueue.re(true);  
+  ```
+  但是当带上true时会清除队列，一切回到解放前.  
+  
+  8.打开/关闭DEBUG输出.  
+  ```javascript
+  $bueue.de(true/false);  
+  ```
+  输出默认关闭，当开启输出时，控制台会显示队列的情况：  
+  
