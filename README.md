@@ -17,19 +17,19 @@
   这样，bueue会自动把你的函数加入队列并赋予一个id.  
   ```javascript
   var a=$bueue.c(function(){
-	  console.log('This is the 1st queue');
+	  console.log('This is the 1st item');
 	  setTimeout(function(){$bueue.next();},2000);
   });
   var b=$bueue.c(function(){
-	  console.log('This is the 2nd queue');
+	  console.log('This is the 2nd item');
 	  setTimeout(function(){$bueue.next();},2000);
   });
   var c=$bueue.c(function(){
-	  console.log('This is the 3rd queue');
+	  console.log('This is the 3rd item');
 	  setTimeout(function(){$bueue.next();},2000);
   });
   var d=$bueue.c(function(){
-	  console.log('This is the 4th queue');
+	  console.log('This is the 4th item');
 	  setTimeout(function(){$bueue.next();},2000);
   });
   console.log(a+' '+b+' '+c+' '+d);
@@ -96,19 +96,19 @@
 ### Example  
 ```javascript
 var a=$bueue.c(function(){
-	console.log('This is the 1st queue');
+	console.log('This is the 1st item');
 	setTimeout(function(){$bueue.next();},2000);
 });
 var b=$bueue.c(function(){
-	console.log('This is the 2nd queue');
+	console.log('This is the 2nd item');
 	setTimeout(function(){$bueue.next();},2000);
 });
 var c=$bueue.c(function(){
-	console.log('This is the 3rd queue');
+	console.log('This is the 3rd item');
 	setTimeout(function(){$bueue.next();},2000);
 });
 var d=$bueue.c(function(){
-	console.log('This is the 4th queue');
+	console.log('This is the 4th item');
 	setTimeout(function(){$bueue.next();},2000);
 });
 $bueue.c(function(){
@@ -119,9 +119,9 @@ $bueue.start();
 ```
 输出结果： 
 ```
-This is the 1st queue
-This is the 2nd queue
-This is the 3rd queue
-This is the 4th queue
-This is the END.
+This is the 1st item  
+This is the 2nd item  
+This is the 3rd item  
+This is the 4th item  
+This is the END.  
 ```
